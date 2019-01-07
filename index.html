@@ -1,13 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
 <head>
 	<title>AngularJS</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
 </head>
 <body>
-<main>
-</main>
+	<main>
+		<form>
+			<p>
+				<label for="text">Text:</label>
+				<input ng-model="name" type="text" name="text" id="text">
+			</p>
+			<p>
+				<label for="msg">Message:</label>
+				<textarea ng-model="message" id="msg"></textarea>
+			</p>
+		</form>
+		<section>
+			<div>{{ name }}</div>
+			<div>{{ message }}</div>
+		</section>
+
+	</main>
 <script src="scripts/main.js"></script>
 </body>
 </html>
